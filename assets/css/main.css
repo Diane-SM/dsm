@@ -4162,7 +4162,6 @@ input, select, textarea {
     background: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 }
 
-/* Center the gradient line under the "Expérience associative" header */
 #experience-associative header.major h2:after {
     display: block;
     content: '';
@@ -4172,4 +4171,54 @@ input, select, textarea {
     border-radius: 2px;
     background: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
 }
+
+/* Base styles for the grid */
+.experience-associative-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row on larger screens */
+    gap: 30px; /* Space between grid items */
+    justify-items: center; /* Center align each grid item */
+}
+
+/* Responsive styles for medium screens (e.g., tablets) */
+@media screen and (max-width: 1024px) {
+    .experience-associative-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+        gap: 20px; /* Adjust spacing */
+    }
+}
+
+/* Responsive styles for small screens (e.g., phones) */
+@media screen and (max-width: 768px) {
+    .experience-associative-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        gap: 20px; /* Adjust spacing for mobile */
+    }
+}
+
+/* Responsive styles for extra-small screens (e.g., very small phones) */
+@media screen and (max-width: 480px) {
+    .experience-associative-grid {
+        grid-template-columns: 1fr; /* 1 item per row */
+        gap: 15px; /* Adjust spacing */
+    }
+}
+
+
+.experience-associative-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px; /* Circle width */
+    height: 120px; /* Circle height */
+    border-radius: 50%; /* Ensure circular shape */
+    overflow: hidden; /* Clip image overflow */
+    background-color: #f5f5f5; /* Optional background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    margin: 0 auto 10px auto; /* Center element */
+    transition: transform 0.2s ease-in-out;
+}
+
+
+
 
